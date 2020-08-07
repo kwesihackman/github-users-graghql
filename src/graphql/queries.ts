@@ -18,3 +18,20 @@ export const FETCH_USERS = gql`
     }
   }
 `;
+
+export const FETCH_USER = gql`
+  query FetchUser($username: String!) {
+    user(login: $username) {
+      bio
+      avatarUrl
+      company
+      createdAt
+      followers {
+        totalCount
+      }
+      following {
+        totalCount
+      }
+    }
+  }
+`;

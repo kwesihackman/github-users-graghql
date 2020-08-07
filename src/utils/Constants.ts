@@ -4,3 +4,8 @@ export const PageType = {
   List: "ListView",
   Details: "DetailsView",
 };
+
+export const Routes = {
+  home: "/",
+  details: "/details/:username",
+};

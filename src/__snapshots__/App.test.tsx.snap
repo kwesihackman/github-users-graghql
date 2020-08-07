@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`card component renders correctly 1`] = `
+<div
+  className="card shadow-sm"
+>
+  <img
+    alt="kwesihackman"
+    className="card-img-top"
+    src="https://avatars1.githubusercontent.com/u/2277160?u=ec4030b31db18e0161ab276c1c446161b80e207d&v=4"
+  />
+  <div
+    className="card-body"
+  >
+    <h5>
+      kwesihackman
+    </h5>
+    <div>
+      Eric Hackman
+    </div>
+    <a
+      className="btn btn-primary my-3"
+      href="https://github.com/kwesihackman"
+      target="_blank"
+    >
+      View Full Profile
+    </a>
+  </div>
+</div>
+`;
