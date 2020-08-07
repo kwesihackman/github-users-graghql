@@ -5,12 +5,14 @@ import App from "./components/App";
 import * as serviceWorker from "./serviceWorker";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import { API_ENDPOINT } from "./utils/Constants";
+import "dotenv/config";
+console.log("token is ", process.env.REACT_APP_GITHUB_PERSONAL_ACCESS_TOKEN);
 
 const client = new ApolloClient({
   uri: API_ENDPOINT,
   cache: new InMemoryCache({}),
   headers: {
-    Authorization: `Bearer ${process.env.REACT_APP_GITHUB_TOKEN}`,
+    Authorization: `Bearer ${process.env.REACT_APP_GITHUB_PERSONAL_ACCESS_TOKEN}`,
   },
 });
 
