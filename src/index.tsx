@@ -3,10 +3,22 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./components/App";
 import * as serviceWorker from "./serviceWorker";
+import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
+import { API_ENDPOINT } from "./utils/Constants";
+
+const client = new ApolloClient({
+  uri: API_ENDPOINT,
+  cache: new InMemoryCache({}),
+  headers: {
+    Authorization: `Bearer ${process.env.REACT_APP_GITHUB_TOKEN}`,
+  },
+});
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ApolloProvider client={client}>
+      <App />
+    </ApolloProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
